@@ -9,6 +9,7 @@ import java.sql.SQLException;
 import java.util.Optional;
 
 @AllArgsConstructor
+// Serviço para consultas relacionadas às colunas do board
 public class BoardColumnQueryService {
 
     private final Connection connection;

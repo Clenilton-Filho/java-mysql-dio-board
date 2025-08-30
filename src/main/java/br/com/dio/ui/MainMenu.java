@@ -21,6 +21,7 @@ public class MainMenu {
 
     private final Scanner scanner = new Scanner(System.in).useDelimiter("\n");
 
+    // Menu de operações principais de gerenciamento de boards
     public void execute() throws SQLException {
         System.out.println("Bem vindo ao gerenciador de boards, escolha a opção desejada");
         var option = -1;
@@ -40,6 +41,7 @@ public class MainMenu {
         }
     }
 
+    // Criação de um novo board com colunas padrão e adicionais
     private void createBoard() throws SQLException {
         var entity = new BoardEntity();
         System.out.println("Informe o nome do seu board");
@@ -80,6 +82,7 @@ public class MainMenu {
 
     }
 
+    // Seleção de um board existente para gerenciar seus cards
     private void selectBoard() throws SQLException {
         System.out.println("Informe o id do board que deseja selecionar");
         var id = scanner.nextLong();
@@ -93,6 +96,7 @@ public class MainMenu {
         }
     }
 
+    // Exluindo um board existente pelo id
     private void deleteBoard() throws SQLException {
         System.out.println("Informe o id do board que será excluido");
         var id = scanner.nextLong();
@@ -106,6 +110,7 @@ public class MainMenu {
         }
     }
 
+    // Método auxiliar para criar colunas do board
     private BoardColumnEntity createColumn(final String name, final BoardColumnKindEnum kind, final int order){
         var boardColumn = new BoardColumnEntity();
         boardColumn.setName(name);

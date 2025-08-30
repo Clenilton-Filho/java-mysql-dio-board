@@ -1,3 +1,4 @@
+# Arquivo principal do Liquibase que inclui todas as mudanças de banco de dados
 databaseChangeLog:
   - includeAll:
       path: db/changelog/migrations

@@ -12,6 +12,7 @@ import java.util.Optional;
 import static br.com.dio.persistence.converter.OffsetDateTimeConverter.toOffsetDateTime;
 import static java.util.Objects.nonNull;
 
+// DAO para operações relacionadas aos cards
 @AllArgsConstructor
 public class CardDAO {
 

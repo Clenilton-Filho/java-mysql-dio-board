@@ -8,6 +8,7 @@ import lombok.AllArgsConstructor;
 import java.sql.Connection;
 import java.sql.SQLException;
 
+// Serviço para operações relacionadas aos boards
 @AllArgsConstructor
 public class BoardService {
 

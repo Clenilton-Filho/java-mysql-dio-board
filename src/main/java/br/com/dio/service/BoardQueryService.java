@@ -10,6 +10,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Optional;
 
+// Serviço para consultas relacionadas aos boards
 @AllArgsConstructor
 public class BoardQueryService {
 

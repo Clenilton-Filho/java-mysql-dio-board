@@ -8,6 +8,7 @@ import java.sql.SQLException;
 
 import static lombok.AccessLevel.PRIVATE;
 
+// Classe de configuração para obter conexões com o banco de dados
 @NoArgsConstructor(access = PRIVATE)
 public final class ConnectionConfig {
 

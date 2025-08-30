@@ -15,6 +15,7 @@ import java.util.Optional;
 import static br.com.dio.persistence.entity.BoardColumnKindEnum.findByName;
 import static java.util.Objects.isNull;
 
+// DAO para operações relacionadas às colunas do board
 @RequiredArgsConstructor
 public class BoardColumnDAO {
 

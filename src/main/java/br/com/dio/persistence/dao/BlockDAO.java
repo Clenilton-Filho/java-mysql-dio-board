@@ -8,6 +8,7 @@ import java.time.OffsetDateTime;
 
 import static br.com.dio.persistence.converter.OffsetDateTimeConverter.toTimestamp;
 
+// DAO para operações de bloqueio e desbloqueio de cartões
 @AllArgsConstructor
 public class BlockDAO {
 

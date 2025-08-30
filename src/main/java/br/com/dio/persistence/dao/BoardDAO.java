@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Optional;
 
+// DAO para operações relacionadas à entidade Board
 @AllArgsConstructor
 public class BoardDAO {
 

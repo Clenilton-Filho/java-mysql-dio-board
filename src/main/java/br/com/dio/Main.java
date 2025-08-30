@@ -11,6 +11,7 @@ import static br.com.dio.persistence.config.ConnectionConfig.getConnection;
 public class Main {
 
     public static void main(String[] args) throws SQLException {
+        // Ao iniciar a aplicação, executa as migrações necessárias no banco de dados
         try(var connection = getConnection()){
             new MigrationStrategy(connection).executeMigration();
         }

@@ -23,6 +23,7 @@ public class BoardMenu {
     private final BoardEntity entity;
 
     public void execute() {
+        // Menu de operações do board
         try {
             System.out.printf("Bem vindo ao board %s, selecione a operação desejada\n", entity.getId());
             var option = -1;
@@ -58,6 +59,7 @@ public class BoardMenu {
         }
     }
 
+    // criação de card
     private void createCard() throws SQLException{
         var card = new CardEntity();
         System.out.println("Informe o título do card");
@@ -70,6 +72,7 @@ public class BoardMenu {
         }
     }
 
+    // mover um card escolhido para a próxima coluna do board (considerando a ordem)
     private void moveCardToNextColumn() throws SQLException {
         System.out.println("Informe o id do card que deseja mover para a próxima coluna");
         var cardId = scanner.nextLong();
@@ -83,6 +86,7 @@ public class BoardMenu {
         }
     }
 
+    // bloquear um card escolhido informando o motivo do bloqueio
     private void blockCard() throws SQLException {
         System.out.println("Informe o id do card que será bloqueado");
         var cardId = scanner.nextLong();
@@ -98,6 +102,7 @@ public class BoardMenu {
         }
     }
 
+    // desbloquear um card escolhido informando o motivo do desbloqueio
     private void unblockCard() throws SQLException {
         System.out.println("Informe o id do card que será desbloqueado");
         var cardId = scanner.nextLong();
@@ -110,6 +115,7 @@ public class BoardMenu {
         }
     }
 
+    // cancelar um card escolhido (mover para a coluna de cancelamento)
     private void cancelCard() throws SQLException {
         System.out.println("Informe o id do card que deseja mover para a coluna de cancelamento");
         var cardId = scanner.nextLong();
@@ -124,6 +130,7 @@ public class BoardMenu {
         }
     }
 
+    // mostrar detalhes do board (colunas e quantidade de cards em cada coluna)
     private void showBoard() throws SQLException {
         try(var connection = getConnection()){
             var optional = new BoardQueryService(connection).showBoardDetails(entity.getId());
@@ -136,6 +143,7 @@ public class BoardMenu {
         }
     }
 
+    // mostrar detalhes de uma coluna escolhida (cards que estão na coluna)
     private void showColumn() throws SQLException {
         var columnsIds = entity.getBoardColumns().stream().map(BoardColumnEntity::getId).toList();
         var selectedColumnId = -1L;
@@ -154,6 +162,7 @@ public class BoardMenu {
         }
     }
 
+    // mostrar detalhes de um card escolhido (status, coluna atual, bloqueios)
     private void showCard() throws SQLException {
         System.out.println("Informe o id do card que deseja visualizar");
         var selectedCardId = scanner.nextLong();

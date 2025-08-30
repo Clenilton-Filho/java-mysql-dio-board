@@ -9,6 +9,7 @@ import static java.time.ZoneOffset.UTC;
 import static java.util.Objects.nonNull;
 import static lombok.AccessLevel.PRIVATE;
 
+// Conversor para transformar entre Timestamp e OffsetDateTime
 @NoArgsConstructor(access = PRIVATE)
 public final class OffsetDateTimeConverter {
 

@@ -14,6 +14,9 @@ import java.sql.SQLException;
 
 import static br.com.dio.persistence.config.ConnectionConfig.getConnection;
 
+
+// Classe responsável por executar as migrações do banco de dados usando Liquibase
+// Como a aplicação roda em console, redirecionamos a saída padrão e de erro para um arquivo de log
 @AllArgsConstructor
 public class MigrationStrategy {
 

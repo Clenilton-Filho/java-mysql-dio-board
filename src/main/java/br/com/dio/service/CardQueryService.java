@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.Optional;
 
+// Serviço para consultas relacionadas aos cards
 @AllArgsConstructor
 public class CardQueryService {
 

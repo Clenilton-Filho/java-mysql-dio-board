@@ -17,6 +17,7 @@ import static br.com.dio.persistence.entity.BoardColumnKindEnum.CANCEL;
 import static br.com.dio.persistence.entity.BoardColumnKindEnum.FINAL;
 
 
+// Serviço para operações relacionadas aos cards
 @AllArgsConstructor
 public class CardService {
 
